@@ -12,6 +12,7 @@ func NewServer() *Server {
   return &Server{}; 
 }
 
+
 var indexPage = `
   <!DOCTYPE html>
   <html>
