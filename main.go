@@ -15,7 +15,7 @@ func main() {
     address := ":4500";
     mux := http.NewServeMux(); 
     srv := server.NewServer(); 
-    navbar := cmpt.Navbar("simeon");
+    navbar := cmpt.Navbar();
 
     mux.HandleFunc("/", srv.HandleIndex);
     mux.HandleFunc("/about", srv.HandleAbout);
