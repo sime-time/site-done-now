@@ -18,15 +18,16 @@ func main() {
     navbar := cmpt.Navbar();
 
     mux.HandleFunc("/", srv.HandleIndex);
-    mux.HandleFunc("/about", srv.HandleAbout);
+    mux.HandleFunc("/users/create", srv.HandleCreateUser);
     mux.Handle("/navbar", templ.Handler(navbar));
+    mux.HandleFunc("/users", srv.HandleReadUsers); 
 
     http_server := &http.Server {
-    Addr: address,
-    Handler: mux, 
-    ReadTimeout: 10 * time.Second, 
-    WriteTimeout: 10 * time.Second, 
-    MaxHeaderBytes: 1 << 20,
+        Addr: address,
+        Handler: mux, 
+        ReadTimeout: 10 * time.Second, 
+        WriteTimeout: 10 * time.Second, 
+        MaxHeaderBytes: 1 << 20,
     }
 
     // start the http server on localhost 
