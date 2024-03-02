@@ -1,38 +1,23 @@
 package main
 
 import (
+	"fmt"
 	"log"
 	"net/http"
-	"site-done-now/pkg/cmpt"
-	"site-done-now/pkg/server"
-	"time"
-	"github.com/a-h/templ"
+    "site-done-now/server"
 )
 
-
-
 func main() {
-    address := ":4500";
-    mux := http.NewServeMux(); 
-    srv := server.NewServer(); 
-    navbar := cmpt.Navbar();
+    const address string = ":4500";
 
-    mux.HandleFunc("/", srv.HandleIndex);
-    mux.HandleFunc("/users/create", srv.HandleCreateUser);
-    mux.Handle("/navbar", templ.Handler(navbar));
-    mux.HandleFunc("/users", srv.HandleReadUsers); 
+    // create server with server-side handler functions
+    srv := server.NewServer()  
 
-    http_server := &http.Server {
-        Addr: address,
-        Handler: mux, 
-        ReadTimeout: 10 * time.Second, 
-        WriteTimeout: 10 * time.Second, 
-        MaxHeaderBytes: 1 << 20,
-    }
+    http.HandleFunc("/", srv.HandleFilmList)
+    http.HandleFunc("/add-film", srv.HandleAddNewFilm)
 
-    // start the http server on localhost 
-    log.Printf("Server listening on localhost:%s...\n", address); 
-    log.Fatal(http_server.ListenAndServe()); 
+    fmt.Printf("Server listening on localhost%v... \n", address)
+    log.Fatal(http.ListenAndServe(address, nil)); 
 }
 
 
