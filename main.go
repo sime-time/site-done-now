@@ -4,20 +4,17 @@ import (
 	"fmt"
 	"log"
 	"net/http"
-    "site-done-now/server"
+	"site-done-now/components"
+	"github.com/a-h/templ"
 )
 
 func main() {
     const address string = ":4500";
+    
+    index_page := components.Index();
+    http.Handle("/", templ.Handler(index_page)); 
 
-    // create server with server-side handler functions
-    srv := server.NewServer()  
-
-    http.HandleFunc("/", srv.HandleFilmList)
-    http.HandleFunc("/add-film", srv.HandleAddNewFilm)
-    http.HandleFunc("/navbar", srv.HandleNavBar)
-
-    fmt.Printf("Server listening on localhost%v... \n", address)
+    fmt.Printf("Server listening on localhost%v... \n", address);
     log.Fatal(http.ListenAndServe(address, nil)); 
 }
 
