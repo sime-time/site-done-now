@@ -15,6 +15,7 @@ func main() {
 
     http.HandleFunc("/", srv.HandleFilmList)
     http.HandleFunc("/add-film", srv.HandleAddNewFilm)
+    http.HandleFunc("/navbar", srv.HandleNavBar)
 
     fmt.Printf("Server listening on localhost%v... \n", address)
     log.Fatal(http.ListenAndServe(address, nil)); 

@@ -15,9 +15,9 @@ func NewServer() *Server {
     return &Server{}; 
 }
 
-type Film struct {
-    Title string 
-    Director string 
+type NavItem struct {
+    Label string 
+    Href string  
 }
 
 func (s *Server) HandleFilmList(w http.ResponseWriter, r *http.Request) {
@@ -39,5 +39,17 @@ func (s *Server) HandleAddNewFilm(w http.ResponseWriter, r *http.Request) {
     tmpl := template.Must(template.ParseFiles("views/index.html"))
     // reference a block name in our template fragment
     tmpl.ExecuteTemplate(w, "film-list-element", Film{Title: title, Director: director})
+}
+
+func (s *Server) HandleNavBar(w http.ResponseWriter, r *http.Request) {
+    tmpl := template.Must(template.ParseFiles("views/navbar.html"))
+    navItems := map[string][]NavItem {
+        "NavItems": {
+            {Label: "About Us", Href: "#"},
+            {Label: "Contact", Href: "#"},
+            {Label: "Services", Href: "#"}, 
+        },
+    }
+    tmpl.Execute(w, navItems) 
 }
 
