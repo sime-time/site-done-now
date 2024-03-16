@@ -10,7 +10,8 @@ import (
 
 func main() {
     const address string = ":4500";
-    
+    http.Handle("/images/", http.StripPrefix("/images", http.FileServer(http.Dir("./images"))))
+ 
     index_page := components.Index();
     http.Handle("/", templ.Handler(index_page)); 
 

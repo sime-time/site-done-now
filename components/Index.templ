@@ -5,8 +5,10 @@ templ Index() {
     <html>
         @Head("Site Done Now | Local Indy Website Design") 
         <body>
-            @Navbar() 
-            @Hero() 
+            <header>
+                @Navbar()
+                @Hero()
+            </header>
             <main>
                 <h2>Start the main section</h2>
 
@@ -18,4 +20,10 @@ templ Index() {
             @Footer() 
         </body>
     </html>
+}
+
+
+css logo() {
+    width: 50px;
+    height: auto;
 }
