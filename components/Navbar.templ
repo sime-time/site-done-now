@@ -1,12 +1,25 @@
 package components 
 
 templ Navbar() {
-    <nav>
-        <ul>
+    <nav class="nav-bar">
+        <div class="nav-branding">
+            <a href="/" class="nav-logo">
+                <img src="../assets/images/sitedonenow.svg" class={ logo() } alt="company logo" />
+            </a>
+            <h1 class="nav-title">SiteDoneNow</h1>
+        </div>
+        <ul class="nav-menu">
             <li><a href="/">Home</a></li>
-            <li><a href="/about/">About</a></li>
-            <li><a href="/contact/">Contact Us</a></li>
-            <li><a href="/portfolio/">Portfolio</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/services">Services</a></li>
+            <li><a href="/#portfolio">Portfolio</a></li>
+            <li><a href="/blog/recent-posts">Blog</a></li>
+            <li><a href="/contact">Contact</a></li>
         </ul>
+        <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
     </nav>
 }
