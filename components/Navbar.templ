@@ -1,5 +1,20 @@
 package components 
 
+type NavItem struct {
+    Label string 
+    Href templ.SafeURL 
+}
+
+var navItems = []NavItem {
+    {Label: "Home", Href: "/"},
+    {Label: "About", Href: "/about"},
+    {Label: "Services", Href: "/services"},
+    {Label: "Portfolio", Href: "/#portfolio"},
+    {Label: "Blog", Href: "/blog/recent-posts"},
+    {Label: "Contact", Href: "/contact"},
+}
+
+
 templ Navbar() {
     <nav class="nav-bar">
         <div class="nav-branding">
@@ -9,17 +24,19 @@ templ Navbar() {
             <h1 class="nav-title">SiteDoneNow</h1>
         </div>
         <ul class="nav-menu">
-            <li><a href="/">Home</a></li>
-            <li><a href="/about">About</a></li>
-            <li><a href="/services">Services</a></li>
-            <li><a href="/#portfolio">Portfolio</a></li>
-            <li><a href="/blog/recent-posts">Blog</a></li>
-            <li><a href="/contact">Contact</a></li>
+        for _, item := range navItems {
+            <li class="nav-item">
+                <a href={ item.Href } class="nav-link">{ item.Label }</a>
+            </li>
+        }
         </ul>
-        <div class="hamburger">
+        <div class="hamburger" aria-hidden="true">
             <span class="bar"></span>
             <span class="bar"></span>
             <span class="bar"></span>
         </div>
     </nav>
 }
+
+
+

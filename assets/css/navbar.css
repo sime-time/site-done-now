@@ -6,6 +6,10 @@
     padding: 0 2rem;
 }
 
+.nav-branding {
+    font-size: 1rem;
+}
+
 .nav-menu {
     display: flex;
     flex-direction: row;
@@ -14,15 +18,11 @@
     gap: 3.5rem;
 }
 
-.nav-branding {
-    font-size: 1rem;
-}
-
-.nav-menu li>a {
+.nav-link {
     transition: 0.5s ease;
 }
 
-.nav-menu li>a:hover {
+.nav-link:hover {
     color: dodgerblue;
 }
 
@@ -65,7 +65,18 @@
         gap: 0;
         flex-direction: column;
         width: 100%;
+        text-align: center;
+        transition: 0.3s; 
     }
+
+    .nav-item {
+        margin: 1rem 0;
+    }
+
+    .nav-menu.active {
+        left: 0; 
+    }
+
 }
 
 
