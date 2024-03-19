@@ -10,7 +10,6 @@ var navItems = []NavItem {
     {Label: "About", Href: "/about"},
     {Label: "Services", Href: "/services"},
     {Label: "Portfolio", Href: "/#portfolio"},
-    {Label: "Blog", Href: "/blog/recent-posts"},
     {Label: "Contact", Href: "/contact"},
 }
 
@@ -19,9 +18,13 @@ templ Navbar() {
     <nav class="nav-bar">
         <div class="nav-branding">
             <a href="/" class="nav-logo">
-                <img src="../assets/images/sitedonenow.svg" class={ logo() } alt="company logo" />
+                <img src="../assets/images/sitedonenow.svg" class={ logo(60) } alt="company logo" />
             </a>
-            <h1 class="nav-title">SiteDoneNow</h1>
+            <div class="nav-site-name">
+                <span>Site</span>
+                <span>Done</span>
+                <span class="text-emphasis">Now</span>
+            </div>
         </div>
         <ul class="nav-menu">
         for _, item := range navItems {

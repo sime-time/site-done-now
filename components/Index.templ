@@ -1,30 +1,27 @@
 package components 
+import "fmt" 
 
 templ Index() {
     <!DOCTYPE html> 
     <html>
-        @Head("Site Done Now | Local Indy Website Design") 
+        @Head("Site Done Now | Local Indianapolis Website Design") 
         <body>
             <header>
                 @Navbar()
                 @Hero()
             </header>
             <main>
-                <h2>Start the main section</h2>
 
-                <p>
-                    Don't mix up paragraphs and headlines.
-                </p>
 
             </main>
-            @Footer() 
+            <!-- @Footer() -->
             <script src="../assets/js/script.js"></script>
         </body>
     </html>
 }
 
 
-css logo() {
-    width: 50px;
+css logo(size int) {
+    width: { fmt.Sprintf("%vpx", size) };
     height: auto;
 }

@@ -4,24 +4,24 @@
 	 viewBox="0 0 500 500" style="enable-background:new 0 0 500 500;" xml:space="preserve">
 <style type="text/css">
 	.st0{fill:#2D2322;stroke:#2D2322;stroke-miterlimit:10;}
-	.st1{fill:#F95738;stroke:#2D2322;stroke-width:10;stroke-miterlimit:10;}
-	.st2{fill:#EE964B;stroke:#2D2322;stroke-width:10;stroke-miterlimit:10;}
+	.st1{fill:#BF5D5E;stroke:#2D2322;stroke-width:10;stroke-miterlimit:10;}
+	.st2{fill:#F98170;stroke:#2D2322;stroke-width:10;stroke-miterlimit:10;}
 </style>
 <g id="Layer_5">
 	<rect class="st0" width="500" height="500"/>
 </g>
 <g id="Layer_4">
-	<rect x="338.21" y="62.44" class="st1" width="99.35" height="375.12"/>
+	<rect x="338.2" y="62.4" class="st1" width="99.4" height="375.1"/>
 </g>
 <g id="Layer_1_00000071539533432425206510000005844705038372099228_">
 	<g>
-		<polygon class="st2" points="387.29,249.99 62.44,62.44 62.44,437.55 		"/>
+		<polygon class="st2" points="387.3,250 62.4,62.4 62.4,437.5 		"/>
 	</g>
 	<g>
-		<polygon class="st2" points="387.29,249.99 62.44,62.44 62.44,437.55 		"/>
+		<polygon class="st2" points="387.3,250 62.4,62.4 62.4,437.5 		"/>
 	</g>
 	<g>
-		<polygon class="st2" points="387.29,249.99 62.44,62.44 62.44,437.55 		"/>
+		<polygon class="st2" points="387.3,250 62.4,62.4 62.4,437.5 		"/>
 	</g>
 </g>
 </svg>
