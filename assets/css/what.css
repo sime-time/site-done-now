@@ -1,0 +1,4 @@
+.container.what {
+    display: flex;
+    flex-direction: row; 
+}

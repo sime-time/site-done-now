@@ -1,0 +1,21 @@
+package components
+
+templ What() {
+    <div class="container what">
+        <div class="what-summary">
+            <h2>What we provide</h2>
+            <p></p>
+        </div> 
+        <div class="what-services">
+            @keyPoint("", "Mobile Friendly", "this paragraph describes what this service is." ) 
+        </div>
+    </div>
+}
+
+templ keyPoint(icon string, heading string, desc string) {
+    <div class="key-point">
+        <div class="key-icon"><i class={ icon }></i></div>
+        <h3 class="key-heading">{ heading }</h3>
+        <p class="key-desc">{ desc }</p> 
+    </div>
+}
