@@ -1,4 +1,26 @@
 .container.what {
     display: flex;
     flex-direction: row; 
+    gap: 1rem;
+}
+
+.what-brief {
+    display: flex;
+    flex-direction: column;
+}
+
+.what-services {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1rem;
+}
+
+@media(max-width: 768px) {
+    .container.what {
+        flex-direction: column;
+    }
+    .what-services {
+        display: flex;
+        flex-direction: column;
+    }
 }

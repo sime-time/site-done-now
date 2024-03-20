@@ -1,9 +1,9 @@
 .container.hero {
-    padding-block: 11rem;
+    padding-block: 10rem;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    gap: 2.5rem;
+    gap: 3rem;
 }
 
 .hero-heading {
@@ -25,6 +25,8 @@
     flex-direction: row;
     align-items: center;
     align-content: flex-start;
+    font-family: sans-serif;
+
 }
 
 .cta-btn {
@@ -33,8 +35,11 @@
     border: 1.5px solid var(--secondary-color); 
     border-radius: var(--border-radius);
     padding: 1rem 2rem;
+    line-height: 4rem;
     letter-spacing: 0.04rem;
     font-size: 1rem;
+    font-family: inherit;
+    align-items: center;
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
 }
@@ -49,30 +54,40 @@
     color: black; 
     padding: 1rem 2rem;
     letter-spacing: 0.04rem;
+    line-height: 4;
     font-size: 1rem;
+    font-family: inherit;
+    align-items: center;
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
 }
 
 .arrow-right {
+    position: absolute;
     font-size: 1.5rem;
-    margin-left: 0.35rem;
+    font-family: inherit;
+    margin-left: 0.4rem;
+    margin-top: -0.9rem;
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
 }
 
 
 .see-work-btn:hover .arrow-right {
-    margin-left: 1rem; 
+    margin-left: 1.2rem; 
 }
 
 @media(max-width: 768px) {
     .container.hero {
-        padding-block: 5rem;
+        padding-block: 7rem;
+        gap: 2rem;
     }
     .hero-heading {
         font-size: 2.5rem;
         line-height: 3rem;
-
+    }
+    .hero-sub {
+        font-size: 1rem;
+        line-height: 1.5rem;
     }
 }
