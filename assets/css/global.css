@@ -45,4 +45,31 @@ button {
     margin: auto;
 }
 
+.btn-group {
+    font-family: sans-serif;
+}
+
+.btn {
+    border-radius: var(--border-radius);
+    padding: 1rem 2rem;
+    line-height: 4rem; 
+    letter-spacing: 0.04rem;
+    font-size: 1rem; 
+    font-family: inherit;
+    align-items: center; 
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn.learn-more {
+    color: var(--secondary-color);
+    background: white; 
+    border: 1.5px solid var(--secondary-color); 
+}
+
+.btn.learn-more:hover {
+    color: var(--primary-color); 
+    box-shadow: 0 0 10px var(--primary-color); 
+}
+
 
