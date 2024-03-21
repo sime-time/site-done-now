@@ -1,28 +1,51 @@
 .container.what {
     display: flex;
     flex-direction: row; 
-    gap: 1rem;
+    gap: 5rem;
     align-items: center;
+    margin-block: 5rem;
 }
 
 .what-brief {
     display: flex;
     flex-direction: column;
+    line-height: 1.5rem;
+    gap: 1.2rem;
+    font-size: 1rem;
+}
+.what-brief h2 {
+    font-size: 2rem;
 }
 
 .what-services {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-gap: 1rem;
+    grid-gap: 2rem;
+}
+.key-point {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    line-height: 1.5rem;
+}
+
+.key-icon i {
+    font-size: 2rem;
+    border: 2.5px solid black; 
+    border-radius: var(--border-radius);
+    padding: 0.5rem;
+    line-height: 4rem;
 }
 
 
 @media(max-width: 768px) {
     .container.what {
         flex-direction: column;
+        gap: 3rem;
     }
     .what-services {
         display: flex;
         flex-direction: column;
     }
+
 }

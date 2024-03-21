@@ -24,7 +24,7 @@
 .btn.cta {
     background: var(--secondary-color);
     color: white; 
-    border: 1.5px solid var(--secondary-color); 
+    border: var(--border-size) solid var(--secondary-color); 
 }
 .btn.cta:hover {
     background: white;

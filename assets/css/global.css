@@ -5,6 +5,7 @@
     line-height: 1;
     --max-width: 90%;
     --border-radius: 8px;
+    --border-size: 1.5px;
     --primary-color: #F98170;
     --secondary-color: #BF5D5E;
     --bold-weight: 900; 
@@ -64,7 +65,7 @@ button {
 .btn.learn-more {
     color: var(--secondary-color);
     background: white; 
-    border: 1.5px solid var(--secondary-color); 
+    border: var(--border-size) solid var(--secondary-color); 
 }
 
 .btn.learn-more:hover {
