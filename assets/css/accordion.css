@@ -26,14 +26,14 @@
 }
 
 .accordion-label h3 {
-    font-size: 1.5rem;
+    font-size: 1.75rem;
     font-weight: var(--regular-weight);
 }
 
 
 .accordion-label i {
     display: inline-block;
-    font-size: 1.75rem;
+    font-size: 2rem;
     margin-top: -6px;
     transition: transform 0.5s ease, color 0.5s ease; 
     -webkit-transition: transform 0.5s ease, color 0.5s ease; 
