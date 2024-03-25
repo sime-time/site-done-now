@@ -10,11 +10,8 @@
     display: flex;
     flex-direction: column;
     line-height: 1.5rem;
-    gap: 1.2rem;
+    gap: 1rem;
     font-size: 1rem;
-}
-.what-brief h2 {
-    font-size: 2rem;
 }
 
 .what-services {
@@ -29,12 +26,30 @@
     line-height: 1.5rem;
 }
 
+.key-heading {
+    cursor: default;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
 .key-icon i {
     font-size: 2rem;
     border: 2.5px solid black; 
     border-radius: var(--border-radius);
     padding: 0.5rem;
     line-height: 4rem;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.key-point:hover .key-icon i {
+    color: var(--primary-color); 
+    border: 2.5px solid var(--secondary-color);
+    box-shadow: 0 0 10px var(--primary-color);
+}
+
+.key-point:hover .key-heading {
+    color: var(--secondary-color); 
 }
 
 

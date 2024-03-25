@@ -23,12 +23,13 @@
 
 .btn.cta {
     background: var(--secondary-color);
-    color: white; 
+    color: var(--bg-color); 
     border: var(--border-size) solid var(--secondary-color); 
 }
 .btn.cta:hover {
-    background: white;
+    background: var(--bg-color);
     color: var(--secondary-color);
+    box-shadow: 0 0 10px var(--primary-color); 
 }
 
 .btn.see-work {

@@ -1,0 +1,31 @@
+package components
+
+templ ServicesBrief() {
+    <div class="container services-brief">
+        <h2 class="accordion-heading"><span class="text-emphasis">$0</span> Down, <span class="text-emphasis">$120</span> Per Month <br/>12 Month Minimum Contract</h2>
+        @Accordion()  
+    </div>
+}
+
+templ Accordion() {
+    <ul class="accordion">
+        @accordionListItem("Web Design & Development", "Hours upon hours of design, development, and testing goes into your website.")
+        @accordionListItem("Hosting Fees Included", "Hosting fees are included in the monthly payment.")
+        @accordionListItem("24/7 Developer Support", "Call and speak directly to the lead developer anytime, any day of the week. No automated phone responses.")
+        @accordionListItem("Unlimited Edits", "Change whatever you want on the website and it will be done within 24 hours.")
+    </ul>  
+}
+
+templ accordionListItem(label string, content string) {
+     <li class="accordion-item">
+        <div class="accordion-label">
+            <h3>{ label }</h3>
+            <i class="ri-add-circle-fill"></i>
+        </div>
+        <div class="accordion-content">
+            <p>{ content }</p>
+        </div>
+    </li>
+}
+
+

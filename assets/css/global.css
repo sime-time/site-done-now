@@ -8,6 +8,7 @@
     --border-size: 1.5px;
     --primary-color: #F98170;
     --secondary-color: #BF5D5E;
+    --bg-color: white; 
     --bold-weight: 900; 
     --regular-weight: 400;
 }
@@ -20,6 +21,7 @@
 
 html {
     font-size: 16px;
+    background-color: var(--bg-color);
 }
 
 li {
@@ -28,7 +30,11 @@ li {
 
 a {
     text-decoration: none;
-    cursor: pointer;
+}
+
+h2 {
+    font-size: 2.5rem;
+    line-height: 3rem;
 }
 
 button {
@@ -40,7 +46,6 @@ button {
     font-weight: var(--bold-weight);
 }
 
-
 .container {
     max-width: var(--max-width);
     margin: auto;
@@ -51,6 +56,7 @@ button {
 }
 
 .btn {
+    cursor: pointer; 
     border-radius: var(--border-radius);
     padding: 1rem 2rem;
     line-height: 4rem; 
@@ -64,7 +70,7 @@ button {
 
 .btn.learn-more {
     color: var(--secondary-color);
-    background: white; 
+    background: var(--bg-color); 
     border: var(--border-size) solid var(--secondary-color); 
 }
 
@@ -73,4 +79,9 @@ button {
     box-shadow: 0 0 10px var(--primary-color); 
 }
 
-
+@media(max-width: 768px) {
+    h2 {
+        font-size: 1.6rem;
+        line-height: 2rem;
+    }
+}

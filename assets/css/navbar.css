@@ -84,7 +84,7 @@
         width: 100%;
         text-align: center;
         transition: 0.3s; 
-        background-color: white;
+        background-color: var(--bg-color);
         height: 100vh;
         justify-content: flex-start;
         z-index: 10;

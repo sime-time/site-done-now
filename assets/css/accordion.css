@@ -1,0 +1,67 @@
+.container.services-brief {
+    margin-block: 6rem;
+}
+
+.accordion {
+    margin-top: 2rem;
+}
+
+
+.accordion li {
+    list-style: none; 
+    width: 100%; 
+    border-top: 1.2px solid black; 
+    padding-block: 1rem;
+}
+
+
+.accordion-label {
+    display: flex;
+    align-items: center; 
+    cursor: pointer; 
+    padding-block: 1rem;
+    justify-content: space-between;
+    transition: margin-left 0.5s ease;
+    -webkit-transition: margin-left 0.5s ease;
+}
+
+.accordion-label h3 {
+    font-size: 1.5rem;
+    font-weight: var(--regular-weight);
+}
+
+
+.accordion-label i {
+    display: inline-block;
+    font-size: 1.75rem;
+    margin-top: -6px;
+    transition: transform 0.5s ease, color 0.5s ease; 
+    -webkit-transition: transform 0.5s ease, color 0.5s ease; 
+}
+
+.accordion-content {
+    opacity: 50%;
+    line-height: 1.5rem;
+    height: 0;
+    overflow: hidden;
+    transition: height 0.3s ease, padding 0.3s ease; 
+    -webkit-transition: height 0.3s ease, padding 0.3s ease; 
+}
+
+@media(min-width: 1024px) {
+    .accordion {
+        margin-left: 34%;
+    }
+
+    .accordion li:hover .accordion-label {
+        margin-left: 1.5rem;
+    }
+}
+
+@media(max-width: 768px) {
+
+    .accordion-label {
+        font-size: 1.5rem;
+    }
+}
+
