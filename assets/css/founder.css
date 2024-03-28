@@ -1,0 +1,37 @@
+.container.about-founder {
+    margin-block: 8rem;
+}
+
+.about-founder h2 {
+    margin-bottom: 2rem;
+}
+.founder {
+    display: flex; 
+    flex-direction: row;
+    gap: 4rem;
+}
+
+.founder-brief {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.founder-name {
+    font-size: 3rem;
+}
+
+.founder-titles {
+    font-size: 2rem;
+    color: var(--primary-color);
+    font-weight: var(--bold-weight); 
+}
+
+.founder-description {
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+
+}
+
+
+
