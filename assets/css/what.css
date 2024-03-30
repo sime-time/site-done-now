@@ -28,8 +28,8 @@
 
 .key-heading {
     cursor: default;
-    -webkit-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
 }
 
 .key-icon i {
@@ -38,8 +38,8 @@
     border-radius: var(--border-radius);
     padding: 0.5rem;
     line-height: 4rem;
-    -webkit-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
 }
 
 .key-point:hover .key-icon i {
