@@ -30,7 +30,40 @@
 .founder-description {
     font-size: 1.2rem;
     line-height: 1.6rem;
+}
 
+@media(max-width: 768px) {
+    .about-founder h2 {
+        margin-bottom: 1rem;
+    }
+
+    .founder {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    .founder-brief {
+        gap: 1rem;
+    }
+
+    .founder-name {
+        font-size: 2rem;
+    }
+
+    .founder-titles {
+        font-size: 1.5rem;
+        color: var(--primary-color);
+        font-weight: var(--bold-weight); 
+    }
+
+    .founder-description {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+
+    .founder-img {
+        max-width: 100%;
+        height: auto;
+    }
 }
 
 
