@@ -32,6 +32,13 @@
     line-height: 1.6rem;
 }
 
+@media(max-width: 1024px) {
+    .founder {
+        flex-direction: column;
+        gap: 2rem;
+    }
+}
+
 @media(max-width: 768px) {
     .about-founder h2 {
         margin-bottom: 1rem;

@@ -1,0 +1,26 @@
+package components
+
+
+templ PortfolioList() {
+    <div id="portfolio" class="container portfolio">
+        <h2>Portfolio</h2>
+        <ul class="portfolio-list">
+            @PortfolioItem("College Carry", "An updated website & backend systems to boost productivity", "web development/automation", "../assets/images/collegecarry.png") 
+        </ul>
+    </div>
+}
+
+templ PortfolioItem(businessName string, title string, subtitle string, websiteImg string) {
+    <li class="portfolio-item">
+        <div class="portfolio-brief">
+            <h3 class="business-name">{ businessName }</h3> 
+            <h4 class="portfolio-title">{ title }</h4>
+            <h4 class="portfolio-subtitle">{ subtitle }</h4>
+            <div class="btn-group"><a href="#" class="btn learn-more">View case study</a></div>
+        </div>
+        <div class="portfolio-image">
+            <img src={ websiteImg } alt="website example"/>
+        </div>
+    </li> 
+}
+

@@ -82,13 +82,13 @@
 }
 
 @media(max-width: 768px) {
-
-    .accordion-label {
-        font-size: 1.5rem;
-    }
     .accordion-heading {
         font-size: 1.5rem;
         margin-bottom: 2rem;
     }
+    .accordion-label h3 {
+        font-size: 1.3rem;
+    }
+
 }
 

@@ -1,0 +1,58 @@
+.container.reviews {
+    margin-block: 6rem;
+}
+
+.review-title {
+    display: none;
+}
+
+.full-review {
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.review-quote {
+    font-size: 1.5rem;
+    text-align: center;
+    line-height: 2.3rem;
+    letter-spacing: 0.1px;
+    width: 60%;
+}
+
+.reviewer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+}
+
+.reviewer-image img {
+    width: 60px;
+    height: auto;
+    border-radius: 100%; 
+}
+
+.reviewer-brief {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.reviewer-name {
+    font-weight: var(--bold-weight);
+}
+
+@media(max-width: 768px) {
+    .review-quote {
+        width: 100%;
+        font-size: 1.2rem;
+        line-height: 2rem;
+    }
+
+    .full-review {
+        gap: 1rem;
+    }
+}

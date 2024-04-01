@@ -52,7 +52,11 @@
     color: var(--secondary-color); 
 }
 
-
+@media(max-width: 1024px) {
+    .container.what {
+        flex-direction: column;
+    }
+}
 @media(max-width: 768px) {
     .container.what {
         flex-direction: column;
