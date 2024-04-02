@@ -94,10 +94,13 @@ button {
 .socials-list i:hover {
     color: var(--secondary-color);
 }
+
 @media(max-width: 768px) {
     h2 {
         font-size: 2rem;
         line-height: 2rem;
     }
+
+    
 }
 

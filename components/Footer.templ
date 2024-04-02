@@ -1,19 +1,37 @@
 package components 
 
 templ Footer() {
-    <footer>
-        <img src="../assets/images/sitedonenow.svg" class={ logo(25) } alt="company logo"/>
-        <p>Copyright &copy; 2023 SiteDoneNow LLC. All rights reserved.</p>
+    <footer class="container">
+        <div class="footer-nav">
+            <div class="footer-branding">
+                <a href="/" class="footer-logo">
+                    <img src="../assets/images/sitedonenow.svg" class={ logo(60) } width="60" height="60" alt="company logo" />
+                </a>
+                <div class="nav-site-name">
+                    <span>site</span>
+                    <span>done</span>
+                    <span class="text-emphasis">now</span>
+                </div>
+            </div>
+            <ul class="footer-nav-menu">
+            for _, item := range navItems {
+                <li class="nav-item">
+                    <a href={ item.Href } class="footer-nav-link">{ item.Label }</a>
+                </li>
+            }
+            </ul>
+            @socialsList()
+        </div>
+        <div class="copyright">
+            <p>&copy; 2024 Site Done Now. All rights reserved.</p>
+        </div>
     </footer>
-
-    <style>
-        footer {
-            max-width: 75%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: auto;
-        }
-    </style>
 }
 
+templ socialsList() {
+    <ul class="socials-list">
+        <li><a href="https://www.youtube.com/channel/UCPXnHUu8OVrr7pj1BUW4owQ"><i class="ri-youtube-fill"></i></a></li>
+        <li><a href="https://twitter.com/_sime_time"><i class="ri-twitter-fill"></i></a></li>
+        <li><a href="https://www.linkedin.com/in/simeon-dunn-a36772174/"><i class="ri-linkedin-box-fill"></i></a></li>
+    </ul>
+}
