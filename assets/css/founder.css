@@ -1,8 +1,9 @@
 .container.about-founder {
-    margin-block: 8rem;
+    margin-bottom: 4rem;
 }
 
 .about-founder h2 {
+    padding-top: 4rem;
     margin-bottom: 2rem;
 }
 .founder {

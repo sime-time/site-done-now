@@ -1,0 +1,45 @@
+.container.portfolio {
+    margin-block: 6rem;
+}
+
+.portfolio-item {
+    padding-inline: 5rem;
+    padding-block: 2rem;
+
+    display: flex; 
+    flex-direction: row; 
+    align-items: center;
+    gap: 2rem;
+}
+
+.portfolio-brief {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    flex: 1;
+}
+
+.business-name {
+    font-weight: var(--regular-weight);
+    font-size: 0.9rem;
+}
+
+.portfolio-title {
+    font-weight: var(--bold-weight);
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+
+}
+
+.portfolio-tags {
+    font-weight: var(--regular-weight);   
+    font-size: 1.1rem;
+}
+
+.portfolio-image {
+    flex: 1;
+}
+.portfolio-image img {
+    width: 100%; 
+    height: auto;
+}

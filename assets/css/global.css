@@ -79,6 +79,17 @@ button {
     box-shadow: 0 0 10px var(--primary-color); 
 }
 
+.btn.outline {
+    color: black;
+    background: transparent;
+    border: var(--border-size) solid black; 
+}
+
+.btn.outline:hover {
+    color: white; 
+    background: black;
+}
+
 .socials-list {
     display: flex;
     flex-direction: row;
