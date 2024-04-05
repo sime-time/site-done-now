@@ -1,0 +1,25 @@
+package components
+
+templ Pricing() {
+    <!DOCTYPE html>
+    <html>
+        @Head("Site Done Now | Pricing", pricing_stylesheets)
+        <body>
+            <header>
+                @Navbar()
+            </header>
+            <main>
+                
+            </main>
+            @Footer()
+            <script src="../assets/js/script.js"></script> 
+        </body>
+    </html>
+}
+
+var pricing_stylesheets = []string{
+    "global",
+    "navbar",
+    "pricing",
+    "footer",
+}

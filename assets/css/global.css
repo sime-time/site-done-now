@@ -53,12 +53,13 @@ button {
 
 .btn-group {
     font-family: sans-serif;
+    font-weight: var(--bold-weight);
 }
 
 .btn {
     cursor: pointer; 
     border-radius: var(--border-radius);
-    padding: 1rem 2rem;
+    padding: 1.2rem 2rem;
     line-height: 4rem; 
     letter-spacing: 0.04rem;
     font-size: 1rem; 

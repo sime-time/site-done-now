@@ -4,7 +4,7 @@ import "fmt"
 templ Index() {
     <!DOCTYPE html> 
     <html>
-        @Head("Site Done Now | Indianapolis Website Design") 
+        @Head("Site Done Now | Indianapolis Website Design", index_stylesheets) 
         <body>
             <header>
                 @Navbar()
@@ -13,7 +13,7 @@ templ Index() {
             <main>
                 @What() 
                 @AboutFounder() 
-                @ServicesAccordion()
+                @FAQ()
                 @Reviews()
             </main>
             @Footer() 
@@ -22,6 +22,18 @@ templ Index() {
     </html>
 }
 
+var index_stylesheets = []string{
+    "global", 
+    "navbar", 
+    "hero", 
+    "what", 
+    "accordion", 
+    "founder",
+    "reviews",
+    "portfolio",
+    "pricing",
+    "footer",
+}
 
 css logo(size int) {
     width: { fmt.Sprintf("%vpx", size) };

@@ -1,32 +1,39 @@
 package components
 
-templ ServicesAccordion() {
-    <div id="services" class="container services-accordion">
-        <h2 class="accordion-heading"><span class="text-emphasis">$0</span> Down, <span class="text-emphasis">$275</span> Per Month <br/>12 Month Minimum Contract</h2>
-        @Accordion()  
+// <h2 class="accordion-heading"><span class="text-emphasis">$0</span> Down, <span class="text-emphasis">$275</span> Per Month <br>12 Month Minimum Contract</h2>
+
+var QnA = map[string]string{
+    "Web Design & Development": "Hours upon hours of design, development, and testing goes into your website.",
+    "Hosting Fees Included": "Hosting fees are included in the monthly payment.",
+    "24/7 Developer Contact": "Call and speak directly to the lead developer anytime, any day of the week. No automated phone responses.",
+    "Unlimited Edits": "Change whatever you want on the website and it will be done within 48 hours.",
+    "Ongoing Support & Maintenance": "We ensure the website stays up-to-date, secure, and functions optimally through regular updates, bug fixes, and tech support.",
+}
+
+templ FAQ() {
+    <div id="faq" class="container faq">
+        <h2 class="accordion-heading">Common Questions</h2>
+        @Accordion(QnA) 
     </div>
 }
 
-templ Accordion() {
+
+templ Accordion(items map[string]string) {
     <ul class="accordion">
-        @accordionListItem("Web Design & Development", "Hours upon hours of design, development, and testing goes into your website.")
-        @accordionListItem("Hosting Fees Included", "Hosting fees are included in the monthly payment.")
-        @accordionListItem("24/7 Developer Contact", "Call and speak directly to the lead developer anytime, any day of the week. No automated phone responses.")
-        @accordionListItem("Unlimited Edits", "Change whatever you want on the website and it will be done within 48 hours.")
-        @accordionListItem("Ongoing Support & Maintenance", "We ensure the website stays up-to-date, secure, and functions optimally through regular updates, bug fixes, and tech support.")
-    </ul>  
+    for label, content := range items {
+        <li class="accordion-item">
+            <div class="accordion-label">
+                <h3>{ label }</h3>
+                <i class="ri-add-circle-fill"></i>
+            </div>
+            <div class="accordion-content">
+                <p>{ content }</p>
+            </div>
+        </li>
+    }
+    </ul>
 }
 
-templ accordionListItem(label string, content string) {
-     <li class="accordion-item">
-        <div class="accordion-label">
-            <h3>{ label }</h3>
-            <i class="ri-add-circle-fill"></i>
-        </div>
-        <div class="accordion-content">
-            <p>{ content }</p>
-        </div>
-    </li>
-}
+
 
 

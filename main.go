@@ -15,6 +15,12 @@ func main() {
     index_page := components.Index();
     http.Handle("/", templ.Handler(index_page)); 
 
+    pricing_page := components.Pricing();
+    http.Handle("/pricing", templ.Handler(pricing_page));
+
+    contact_page := components.Contact();
+    http.Handle("/contact", templ.Handler(contact_page)); 
+
     fmt.Printf("Server listening on localhost%v... \n", port);
     log.Fatal(http.ListenAndServe(port, nil)); 
 }

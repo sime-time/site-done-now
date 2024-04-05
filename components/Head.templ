@@ -1,6 +1,7 @@
 package components 
+import "fmt"
 
-templ Head(title string) {
+templ Head(title string, stylesheets []string) {
     <head>
         <meta charset="utf-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -8,14 +9,10 @@ templ Head(title string) {
         <meta name="description" content="We craft responsive sites tailored to your needs. Elevate your online presence with our expert design services. Contact us today!"/>
         <link rel="icon" type="image/png" href="../assets/images/favicon.png" />
         <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
-        <link rel="stylesheet" href="../assets/css/global.css" />
-        <link rel="stylesheet" href="../assets/css/navbar.css" />
-        <link rel="stylesheet" href="../assets/css/hero.css" />
-        <link rel="stylesheet" href="../assets/css/what.css" />
-        <link rel="stylesheet" href="../assets/css/accordion.css" />
-        <link rel="stylesheet" href="../assets/css/founder.css" />
-        <link rel="stylesheet" href="../assets/css/reviews.css" />
-        <link rel="stylesheet" href="../assets/css/portfolio.css" />
-        <link rel="stylesheet" href="../assets/css/footer.css" />
+        for _, name := range stylesheets {
+            <link rel="stylesheet" href={ fmt.Sprintf("../assets/css/%v.css", name) } />
+        }
     </head>
 }
+
+

@@ -32,7 +32,7 @@
     box-shadow: 0 0 10px var(--primary-color); 
 }
 
-.btn.see-work {
+.btn.arrow-slide {
     background: none; 
     border: none;
     color: black; 
@@ -49,7 +49,7 @@
 }
 
 
-.btn.see-work:hover .arrow-right {
+.btn.arrow-slide:hover .arrow-right {
     margin-left: 1.2rem; 
 }
 
@@ -65,5 +65,8 @@
     .hero-sub {
         font-size: 1rem;
         line-height: 1.5rem;
+    }
+    .btn.arrow-slide {
+        display: none; 
     }
 }

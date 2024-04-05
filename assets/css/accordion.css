@@ -1,8 +1,9 @@
-.container.services-accordion {
-    margin-block: 8rem;
+.container.faq {
+    margin-bottom: 4rem;
 }
 
 .accordion-heading {
+    padding-top: 4rem;
     margin-bottom: 4rem;
 }
 

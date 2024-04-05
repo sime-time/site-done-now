@@ -1,0 +1,25 @@
+package components
+
+templ Contact() {
+    <!DOCTYPE html>
+    <html>
+        @Head("Site Done Now | Contact Us", contact_stylesheets)
+        <body>
+            <header>
+                @Navbar()
+            </header>
+            <main>
+                 
+            </main>
+            @Footer()
+            <script src="../assets/js/script.js"></script> 
+        </body>
+    </html>
+}
+
+var contact_stylesheets = []string{
+    "global",
+    "navbar",
+    "contact",
+    "footer",
+}

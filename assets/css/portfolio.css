@@ -1,6 +1,9 @@
 .container.portfolio {
     margin-block: 6rem;
 }
+.portfolio-heading {
+    margin-bottom: 2rem;
+}
 
 .portfolio-item {
     padding-inline: 5rem;
