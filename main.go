@@ -15,6 +15,9 @@ func main() {
     index_page := components.Index();
     http.Handle("/", templ.Handler(index_page)); 
 
+    services_page := components.Services();
+    http.Handle("/services", templ.Handler(services_page)); 
+
     pricing_page := components.Pricing();
     http.Handle("/pricing", templ.Handler(pricing_page));
 

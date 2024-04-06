@@ -1,0 +1,25 @@
+package components
+
+templ Services() {
+    <!DOCTYPE html>
+    <html>
+        @Head("Site Done Now | Services", services_stylesheets)
+        <body>
+            <header>
+                @Navbar()
+            </header>
+            <main>
+                
+            </main>
+            @Footer()
+            <script src="../assets/js/script.js"></script> 
+        </body>
+    </html>
+}
+
+var services_stylesheets = []string{
+    "global",
+    "navbar",
+    "services",
+    "footer",
+}
