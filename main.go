@@ -27,6 +27,8 @@ func main() {
     contact_handler := http.HandlerFunc(contactHandler);
     http.Handle("/submit-contact", contact_handler);
 
+    thankyou_page := components.ThankYou();
+    http.Handle("/thankyou", templ.Handler(thankyou_page)); 
 
     fmt.Printf("Server listening on localhost%v... \n", port);
     log.Fatal(http.ListenAndServe(port, nil)); 
@@ -59,6 +61,6 @@ func contactHandler(w http.ResponseWriter, r *http.Request) {
     // send email 
 
     // success message 
-    http.Redirect(w, r, "/thankyou.html", http.StatusSeeOther); 
+    http.Redirect(w, r, "/thankyou", http.StatusSeeOther); 
 }
 
