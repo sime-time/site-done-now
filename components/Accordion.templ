@@ -1,31 +1,35 @@
 package components
 
-// <h2 class="accordion-heading"><span class="text-emphasis">$0</span> Down, <span class="text-emphasis">$275</span> Per Month <br>12 Month Minimum Contract</h2>
-
-var QnA = map[string]string{
-    "Do I need to pay monthly?": "We have monthly financing options. But if you decide on one time payment, then you can choose us as a hosting provider for a monthly fee. Otherwise, you will have to find another hosting provider.",
-    "How much does it cost?": "Your investment amount depends on what you need. Contact us for a free consultation to understand exactly what you need. Even if you don't decide to work with us, we will still provide you with valuable information.",
-    "I've had someone build me a website before and it seemed like something I could build myself.": "If you felt like you could have built it yourself, then you're probably right, as they were probably using a drag-and-drop website builder like wix or squarespace which are designed to make it easy for the layperson to build a simple easy website by using premade templates. What we provide is a custom made website meticiously coded line by line. We don't use any website builders, we do it compeltely from scratch.",
+type Feature struct {
+    Label string 
+    Content string 
 }
 
-templ FAQ() {
-    <div id="faq" class="container faq">
-        <h2 class="accordion-heading">Common Questions</h2>
-        @Accordion(QnA) 
+var features = []Feature{
+    {Label: "Web Design & Development", Content: "Hours upon hours of design, development, and testing goes into your website."},
+    {Label: "24/7 Developer Contact", Content: "Call and speak directly to the lead developer anytime, any day of the week. No automated phone responses."},
+    {Label: "Unlimited Edits", Content: "Change whatever you want on the website and it will be done within 48 hours."},
+    {Label: "Ongoing Support & Maintenance", Content: "We ensure the website stays up-to-date, secure, and functions optimally through regular updates, bug fixes, and tech support."},
+}
+
+templ Services() {
+    <div id="services" class="container services">
+        // <h2 class="accordion-heading"><span class="text-emphasis">$0</span> Down, <span class="text-emphasis">$275</span> Per Month <br>12 Month Minimum Contract</h2>
+        <h2 class="accordion-heading">Our Services</h2>
+        @Accordion(features) 
     </div>
 }
 
-
-templ Accordion(items map[string]string) {
+templ Accordion(features []Feature) {
     <ul class="accordion">
-    for label, content := range items {
+    for _, feat := range features {
         <li class="accordion-item">
             <div class="accordion-label">
-                <h3>{ label }</h3>
+                <h3>{ feat.Label }</h3>
                 <i class="ri-add-circle-fill"></i>
             </div>
             <div class="accordion-content">
-                <p>{ content }</p>
+                <p>{ feat.Content }</p>
             </div>
         </li>
     }

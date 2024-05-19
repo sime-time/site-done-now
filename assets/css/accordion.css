@@ -1,4 +1,4 @@
-.container.faq {
+.container.services {
     margin-bottom: 4rem;
 }
 
@@ -20,23 +20,7 @@
     position: relative;
 }
 
-.accordion-item::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 1.2px;
-    left: 0;
-    top: 0;
-    background: black; 
-    transform: scale(0, 1);
-    transform-origin: 0% 100%;
-    transition: transform 0.6s ease;
-    -webkit-transition: transform 0.6s ease;
-}
 
-.accordion-item:hover::after {
-    transform: scale(1, 1);
-}
 
 .accordion-label {
     display: flex;
@@ -77,6 +61,24 @@
         margin-left: 34%;
     }
 
+    
+    .accordion-item::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 1.2px;
+        left: 0;
+        top: 0;
+        background: black; 
+        transform: scale(0, 1);
+        transform-origin: 0% 100%;
+        transition: transform 0.6s ease;
+        -webkit-transition: transform 0.6s ease;
+    }
+
+    .accordion-item:hover::after {
+        transform: scale(1, 1);
+    }
     .accordion li:hover .accordion-label {
         margin-left: 1.5rem;
     }

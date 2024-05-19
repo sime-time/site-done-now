@@ -9,7 +9,13 @@ templ Contact() {
                 @Navbar()
             </header>
             <main>
-                @ContactForm()                 
+                <div class="container contact-us">
+                    <h1 class="contact-header">Contact Us</h1>
+                    @socialsList() 
+                    <a class="contact-info" href="mailto:contact@sitedonenow.com">contact@sitedonenow.com</a>
+                    <a class="contact-info" href="tel:317-469-3673">(317) 469-3673</a>
+                    @TidyCal()                 
+                </div>
             </main>
             @Footer()
             <script src="../assets/js/script.js"></script> 
@@ -17,18 +23,28 @@ templ Contact() {
     </html>
 }
 
+templ TidyCal() {
+    <div class="tidycal-embed" data-path="simedunn01/30-minute-meeting"></div>
+    <script src="https://asset-tidycal.b-cdn.net/js/embed.js" async></script>
+}
+
 templ ContactForm() {
-    <form action="/submit-contact" method="post">
-        <label for="name">Name:</label> 
-        <input type="text" id="name" name="name" required />
-
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required />
-
-        <label for="message">Message:</label>
-        <textarea id="message" name="message" rows="4" required></textarea>
-
-        <input type="submit" value="submit" />
+    <form action="/submit-contact" method="post" class="contact-form container">
+        <div class="contact-item">
+            <label for="name">Name:</label> 
+            <input type="text" id="name" name="name" required />
+        </div>
+        <div class="contact-item">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required />
+        </div>
+        <div class="contact-item">
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+        </div>
+        <div class="btn-group">
+            <input type="submit" value="submit" />
+        </div>
     </form>
 }
 
