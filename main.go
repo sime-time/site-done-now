@@ -18,6 +18,9 @@ func main() {
     contact_page := components.Contact();
     http.Handle("/contact", templ.Handler(contact_page)); 
 
+    about_page := components.About();
+    http.Handle("/about", templ.Handler(about_page));
+
     fmt.Printf("Server listening on localhost%v... \n", port);
     log.Fatal(http.ListenAndServe(port, nil)); 
 }

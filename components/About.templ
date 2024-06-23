@@ -1,0 +1,25 @@
+package components
+
+templ About() {
+    <!DOCTYPE html>
+    <html>
+        @Head("Site Done Now | About Us", about_stylesheets)
+        <body>
+            <header>
+                @Navbar()
+            </header>
+            <main>
+                @AboutFounder()
+            </main>
+            @Footer()
+            <script src="../assets/js/script.js"></script> 
+        </body>
+    </html>
+}
+
+var about_stylesheets = []string{
+    "global",
+    "navbar",
+    "founder",
+    "footer",
+}
