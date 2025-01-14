@@ -11,14 +11,13 @@ templ Contact() {
             <main>
                 <div class="container contact-us">
                     <h1 class="contact-header">Contact Us</h1>
-                    @socialsList() 
+                    @socialsList()
                     <a class="contact-info" href="mailto:contact@sitedonenow.com">contact@sitedonenow.com</a>
-                    <a class="contact-info" href="tel:317-469-3673">(317) 469-3673</a>
-                    @TidyCal()                 
+                    @TidyCal()
                 </div>
             </main>
             @Footer()
-            <script src="../assets/js/script.js"></script> 
+            <script src="../assets/js/script.js"></script>
         </body>
     </html>
 }
@@ -31,7 +30,7 @@ templ TidyCal() {
 templ ContactForm() {
     <form action="/submit-contact" method="post" class="contact-form container">
         <div class="contact-item">
-            <label for="name">Name:</label> 
+            <label for="name">Name:</label>
             <input type="text" id="name" name="name" required />
         </div>
         <div class="contact-item">
